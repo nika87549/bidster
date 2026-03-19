@@ -1,0 +1,8 @@
+flask
+flask-bcrypt
+flask-cors
+flask-socketio
+python-socketio
+simple-websocket
+eventlet
+gunicorn
