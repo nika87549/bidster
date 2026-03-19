@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bidster Auction</title>
+    <script src="auction.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1 id="auction-title">Auction</h1>
+
+    <div>
+        <div id="auction-info" class="container" style="margin-bottom:20px;">
+    <img id="auction-image" src="" alt="Product Image" style="width:100%; border-radius:10px;">
+
+    <h2 id="auction-title-text"></h2>
+    <p id="auction-description"></p>
+
+    <div>
+        <strong>Start price:</strong> <span id="start-price"></span><br>
+        <strong>Ticket price:</strong> <span id="ticket-price"></span><br>
+        <strong>Total tickets:</strong> <span id="total-tickets"></span><br>
+        <strong>Tickets sold:</strong> <span id="tickets-sold"></span><br>
+    </div>
+</div>
+        <span>Time left: </span>
+        <span id="timer">--:--:--</span>
+    </div>
+<div id="chat-box" style="border:1px solid #ccc; padding:10px; height:200px; overflow-y:auto; margin-top:20px;">
+</div>
+
+<input id="chat-input" type="text" placeholder="Write a message..." style="width:70%;">
+<button onclick="sendMessage()">Send</button>
+    <div>
+        <span>Last bidder: </span>
+        <span id="last-bidder">-</span>
+    </div>
+
+    <div>
+        <span>Last bid: </span>
+        <span id="last-amount">-</span>
+    </div>
+
+    <button onclick="placeBid()">Place Bid</button>
+</body>
+</html>
+
+
+<button id="theme-toggle" style="position:fixed; top:20px; right:20px;">
+    🌙
+</button>
+
+
+
+
+
+
+<script src="theme.js" defer></script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Auction</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; }
+        h1 { color: #2c3e50; }
+        .item {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        button {
+            padding: 8px 14px;
+            cursor: pointer;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Online Auction</h1>
+<p>Place your bids in real time.</p>
+
+<div class="item">
+    <h2>iPhone 14 Pro</h2>
+    <p>Current bid: <span id="bid1">500</span> USD</p>
+    <button onclick="placeBid('bid1')">Bid +10</button>
+</div>
+
+<div class="item">
+    <h2>Gaming Laptop</h2>
+    <p>Current bid: <span id="bid2">800</span> USD</p>
+    <button onclick="placeBid('bid2')">Bid +10</button>
+</div>
+
+<script>
+function placeBid(id) {
+    let price = document.getElementById(id);
+    price.innerText = Number(price.innerText) + 10;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bidster</title>
+</head>
+<body>
+    <h1>Welcome to Bidster</h1>
+    <p>The auction platform is loading...</p>
+</body>
+</html>
+
+
+<div id="language-selector">
+    <img src="flags/en.png" width="28" onclick="changeLanguage('en')">
+    <img src="flags/ka.png" width="28" onclick="changeLanguage('ka')">
+    <img src="flags/de.png" width="28" onclick="changeLanguage('de')">
+    <img src="flags/fr.png" width="28" onclick="changeLanguage('fr')">
+    <img src="flags/es.png" width="28" onclick="changeLanguage('es')">
+    <img src="flags/it.png" width="28" onclick="changeLanguage('it')">
+    <img src="flags/pl.png" width="28" onclick="changeLanguage('pl')">
+    <img src="flags/cz.png" width="28" onclick="changeLanguage('cz')">
+    <img src="flags/sk.png" width="28" onclick="changeLanguage('sk')">
+    <img src="flags/tr.png" width="28" onclick="changeLanguage('tr')">
+    <img src="flags/gr.png" width="28" onclick="changeLanguage('gr')">
+    <img src="flags/hu.png" width="28" onclick="changeLanguage('hu')">
+    <img src="flags/se.png" width="28" onclick="changeLanguage('se')">
+    <img src="flags/no.png" width="28" onclick="changeLanguage('no')">
+    <img src="flags/fi.png" width="28" onclick="changeLanguage('fi')">
+    <img src="flags/ro.png" width="28" onclick="changeLanguage('ro')">
+    <img src="flags/ua.png" width="28" onclick="changeLanguage('ua')">
+    <img src="flags/az.png" width="28" onclick="changeLanguage('az')">
+    <img src="flags/am.png" width="28" onclick="changeLanguage('am')">
+</div>
+
+<h1 data-i18n="welcome"></h1>
+<p data-i18n="active_auctions"></p>
+<p data-i18n="finished_auctions"></p>
+<button data-i18n="login"></button>
+<button data-i18n="register"></button> -->
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Bidster</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* პატარა სტილი, რომ დროშები ლამაზად ჩაეწყოს */
+        #language-selector img {
+            cursor: pointer;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #language-selector img:hover {
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="language-selector">
+        <img src="flags/en.png" width="28" onclick="changeLanguage('en')" alt="English">
+        <img src="flags/ka.png" width="28" onclick="changeLanguage('ka')" alt="Georgian">
+        <img src="flags/de.png" width="28" onclick="changeLanguage('de')" alt="German">
+        <img src="flags/fr.png" width="28" onclick="changeLanguage('fr')" alt="French">
+        <img src="flags/es.png" width="28" onclick="changeLanguage('es')" alt="Spanish">
+        <img src="flags/it.png" width="28" onclick="changeLanguage('it')" alt="Italian">
+        <img src="flags/pl.png" width="28" onclick="changeLanguage('pl')" alt="Polish">
+        <img src="flags/cz.png" width="28" onclick="changeLanguage('cz')" alt="Czech">
+        <img src="flags/sk.png" width="28" onclick="changeLanguage('sk')" alt="Slovak">
+        <img src="flags/tr.png" width="28" onclick="changeLanguage('tr')" alt="Turkish">
+        <img src="flags/gr.png" width="28" onclick="changeLanguage('gr')" alt="Greek">
+        <img src="flags/hu.png" width="28" onclick="changeLanguage('hu')" alt="Hungarian">
+        <img src="flags/se.png" width="28" onclick="changeLanguage('se')" alt="Swedish">
+        <img src="flags/no.png" width="28" onclick="changeLanguage('no')" alt="Norwegian">
+        <img src="flags/fi.png" width="28" onclick="changeLanguage('fi')" alt="Finnish">
+        <img src="flags/ro.png" width="28" onclick="changeLanguage('ro')" alt="Romanian">
+        <img src="flags/ua.png" width="28" onclick="changeLanguage('ua')" alt="Ukrainian">
+        <img src="flags/az.png" width="28" onclick="changeLanguage('az')" alt="Azerbaijani">
+        <img src="flags/am.png" width="28" onclick="changeLanguage('am')" alt="Armenian">
+    </div>
+
+    <hr> <h1 data-i18n="welcome"></h1>
+    <p data-i18n="active_auctions"></p>
+    <p data-i18n="finished_auctions"></p>
+    
+    <button data-i18n="login"></button>
+    <button data-i18n="register"></button>
+    <div class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Write a message...">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+    </body>
+</html>
+
+<button onclick="buyTicketStripe(1, 1)">Buy Ticket (Card)</button>
+<button onclick="buyTicketPayPal(1, 1)">Buy Ticket (PayPal)</button>
